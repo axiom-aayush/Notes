@@ -1,0 +1,1450 @@
+
+Unity Manual.txt
+
+Ext :
+____________________________
+
+INDEX
+	• Questions / Note 
+	• Table of Content (global) :
+	• Table of Content (detail ) : 
+	• RTRR
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
+
+Questions : 
+	-
+	
+
+____________________________
+	
+Notes 
+	-
+	-----------------------------------------
+	
+	-----------------------------------------
+	Tutorials - Beginner Physics - Lessons
+	https://www.youtube.com/playlist?list=PLX2vGYjWbI0RCmCHa3dDKblhJPpW9ZXnu
+	
+	Colliders
+	Colliders as Triggers
+		passes through 
+	Physics Objects (Rigidbodies)
+		kinematic ; drag ; angular drag ; gravity ; interpolate ; extrapolate ; 
+		constraints 
+	AddForce 
+		force mode : impulse etc ; 
+	AddTorque
+	Physic Materials 
+		bowling ball vs basketball ; static friction ; friction direction etc 
+	Joints 
+		fixed and spring 
+			break force , break torque 
+			anchor ; pivot ; 
+		hinge joint
+	Raycasting 
+	Detecting Collision 
+
+	###
+
+	Vector 
+		magnitude ; x,y,z ; Pythagorus ; dot product , perpendicular, Vector3.Dot(VectorA, VectorB) ; vector3.magnitude 
+		cross product, carrot symbol , left hand symbol , Vector3.Cross(VectorA, VectorB)
+	Enabling and Disabling Components 
+		myLight.enabled = !myLight.enabled; 
+	Activating GameObjects 
+		Debug.Log("Active Self : " +myObject.activeSelf); 
+		Debug.Log(Active in Hierarchy: " +myObject.activeInHierarchy); 
+		parent and child 
+	Translate and Rotate 
+		kinematic 
+	Lookat
+	Modulating values with lerp 
+		lerp - linear interpolation ; lerp(from,to,time) ; 
+		Mathf.Lerp(from float, to float, time float) ;
+	-----------------------------------------
+	Tutorials - Beginner Graphics Lessong 
+
+	1. Camera 
+		attach camera to the the object for first person view - hierarchy ; 3rd person view 
+		orthographic mode - puzzle - top down - 2d  ; perspective mode ; 
+		multiple camera 
+		field of view ;
+		clear flags - skybox , solid color , depth only(multiple camera) , not clear (smear effect) - what's shown in the empty space 
+			skybox - multiple image that surrounds the screen 
+		background 
+		culling mask 
+			nothing ; everything ; default ; transparentFX ; Ignore raycast ; water ; dynamic objects ; UI 
+		projection 
+		clipping planes 
+		normalized view port Rect 
+		Depth 
+		Rendering path 
+		target texture 
+		hdr 
+	2. Materials 
+		asset - visual appearance of game objects 
+		add under mesh renderer material 
+		change in the component - change in the asset itself 
+		base(RGB) - tiling , offset 
+		shader - diffuse ; bumped diffuse etc.... 
+		with or without normal map 
+		bumped specular 
+	3. Meshes
+		polygonal meshes 
+		meshes are created externally and imported to unity 
+	4. Texture 
+		transparency - not jpeg 
+		texture type - texture , normal map , GUI, advanced etc 
+		alpha from grayscale - transparency 
+		wrap mode - repeat , clamp (stretch the texture) 
+		filter mode - point(basic) , bilinear , trilinear(best) - quality settings 
+		aniso level - rendering cost - quality settings 
+	5. Mesh Renderers and Filters 
+		to render a mesh we need these two elements 
+		skinned mesh renderer 
+		how it will be rendered or drawn in the scene - 3 broad categories - shadows , materials , light probes 
+	6. Lights 
+		dynamic light - real time when game is running 
+		baked lighting is calculated offline and saved to textures 
+		type - spot, directional , point , area(baked only) ; ambient light and emissive materials 
+		range 
+		color 
+		intensity 
+		cookie 
+		shadow type - hard , soft (expensive) 
+		draw halo 
+		flare 
+		render mode - vertex ; pixel 
+		culling mask 
+		light mapping 
+	-----------------------------------------
+	Tutorials - Beginner Editor 
+
+		1. Interface Overview 
+		2. Scene View 
+			gizmos ; search 
+		3. Game View 
+		4. Hierarchy and parent-child relationships
+			t:light 
+			t: AudioSource ; search 
+			Path 
+		5. project panel and importing 
+		6. inspector 
+		7. game objects and components 
+		8. tags 
+		9. prefabs 
+		10. build and player settings 
+		11. how to use the asset store 
+	-----------------------------------------
+	Beginner UI 
+
+		1. canvas 
+			ui musk be children of canvas 
+		2. rect transform 
+		3. button 
+		4. Image 
+		5. text 
+		6. events and event triggers 
+		7. slider 
+		8. transitions 
+		9. Scroll rect 
+		10. Mask 
+		11. Scrollbar 
+		12. new UI 
+	-----------------------------------------
+	trigger - passes right through 
+	2D PHYSICS: FUN WITH EFFECTORS
+		https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-physics-fun-effectors
+	COLLIDERS AS TRIGGERS
+		https://unity3d.com/learn/tutorials/topics/physics/colliders-triggers
+	sprite : 
+		a computer graphic that may be moved on-screen and otherwise manipulated as a single entity.
+	THE SPRITE EDITOR
+		https://unity3d.com/learn/tutorials/topics/2d-game-creation/sprite-editor
+		atlas or sprite sheet - multiple elements 
+	2D Textures
+		file:///Applications/Unity/Unity.app/Contents/Documentation/en/Manual/class-TextureImporter.html
+	ANIMATION
+		https://unity3d.com/learn/tutorials/topics/animation	
+		Animating 
+			1. The Animation View
+			2. Animation Properties
+				model , Rig , Animations 
+				bake animation  - IK - Inverse kinematics ; forward kinematics 
+			3. Animation Curves and Events
+			4. Animation Asset API
+				anything in editor folder will be ignored in the build 
+				#if UNITY_EDITOR 
+				#endif
+				inherit from EditorWindow 
+		Controlling Animation 
+			1. The Animator Component
+			2. The Animator Controller
+			3. Animator Controller Layers
+			4. Animator Scripting
+			5. Blend Trees
+			6. Animator Sub-state Machine hierarchies
+		Character Animation 
+			1. Humanoid Avatars
+			2. Authoring Root Motion
+			3. Avatar Masks
+		Live session on Animation 	
+			1. Animate Anything with Mecanim
+			2. Setting up a Humanoid Avatar
+		Community Posts on Animation 
+			1. Character to Player: Bringing your character to life in Unity
+			2. Direct Blend Trees
+			3. Apex Path and Mecanim - Article
+
+	HeaderAttribute
+		https://docs.unity3d.com/ScriptReference/HeaderAttribute.html
+
+	Animator Controllers 
+		https://docs.unity3d.com/Manual/AnimatorControllers.html
+		The Animator Controller Asset
+		The Animator Window
+		Animation State Machines
+			State Machine Basics
+			Animation Parameters
+			State Machine Transitions
+			State Machine Behaviours
+			Sub-State Machines
+			Animation Layers
+			Solo and Mute functionality
+			Target Matching
+			Inverse Kinematics
+			Root Motion - how it works
+				Tutorial: Scripting Root Motion for "in-place" humanoid animations
+		Blend Trees
+			1D Blending
+			2D Blending
+			Direct Blending
+			Additional Blend Tree Options
+		Animation Blend Shapes
+		Animator Override Controllers
+		
+	-----------------------------------------
+	UI - Sparty 
+
+		Anchor preset
+			https://docs.unity3d.com/Manual/UIBasicLayout.html
+		What do the dotted-square button and R button on a Rect Transform do?
+			http://answers.unity3d.com/questions/984328/what-do-the-dotted-square-button-and-r-button-on-a.html
+		Rect transform - some values driven by canvas 
+
+
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
+
+Table of Content (global) :
+
+1. Working In Unity
+2. Unity 2D
+3. Physics
+4. UI
+
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
+
+Table of Content (detail ) : 
+
+________________________________
+________________________________
+
+1. Working In Unity
+	1. Basics
+	2. Asset Workflow
+	3. The Main Windows
+	4. Creating Gameplay
+	5. Editor Features
+	6. Advanced Development
+	7. Advanced Editor Topics
+	8. Licenses and Activation
+	9. Upgrade Guides
+
+________________________________	
+
+1. Working In Unity
+	1. Basics
+		1. Downloading and Installing Unity
+		2. 2D or 3D Projects
+		3. Getting Started
+		4. Learning the Interface
+	2. Asset Workflow
+		1. Primitive and Placeholder Objects
+			cube 
+			sphere 
+			capsule 
+			cylinder 
+			plane 
+			quad
+		2. Importing Assets
+			image, 3d model files, meshes, animations , audio
+		3. Import Settings
+		4. Importing from the Asset Store
+			Window->AssetStore
+			location of downloaded asset files 
+				~/Library/Unity/Asset Store
+		5. Asset Packages
+			Import Package
+			Standard Asset Packages
+				Unity ‘Standard Assets’ consist of several different packages: 
+					2D, Cameras, Characters, CrossPlatformInput, Effects, Environment, ParticleSystems, Prototyping, Utility, Vehicles.
+			Custom Packages
+			Export Package
+			Exporting Updated Packages
+		6. Standard Assets
+			Standard Assets Do Not Upgrade Automatically
+	3. The Main Windows
+		1. The Project Window
+			Favorites section
+			
+			F	Frame selected (ie, show the selected asset in its containing folder)
+			Tab	Shift focus between first column and second column (Two columns)
+			Ctrl/Cmd + F	Focus search field
+			Ctrl/Cmd + A	Select all visible items in list
+			Ctrl/Cmd + D	Duplicate selected assets
+			Delete	Delete with dialog
+			Delete + Shift	Delete without dialog
+			Backspace + Cmd	Delete without dialogs (OSX)
+			Enter	Begin rename selected (OSX)
+			Cmd + down arrow	Open selected assets (OSX)
+			Cmd + up arrow	Jump to parent folder (OSX, Two columns)
+			F2	Begin rename selected (Win)
+			Enter	Open selected assets (Win)
+			Backspace	Jump to parent folder (Win, Two columns)
+			Right arrow	Expand selected item (tree views and search results). If the item is already expanded, this will select its first child item.
+			Left arrow	Collapse selected item (tree views and search results). If the item is already collapsed, this will select its parent item.
+			Alt + right arrow	Expand item when showing assets as previews
+			Alt + left arrow	Collapse item when showing assets as previews
+			
+		2. The Scene View
+			1. Scene View Navigation
+				frame selected > F
+				lock view to selected > shift F 
+				Move, Orbit, Zoom 
+			2. Positioning GameObjects
+				Translate, Rotate, and Scale
+				Gizmo Display Toggles
+					For Position:
+						Center will position the Gizmo at the center of the object’s rendered bounds.
+						Pivot will position the Gizmo at the actual pivot point of a Mesh.
+					For Rotation:
+						Local will keep the Gizmo’s rotation relative to the object’s.
+						Global will clamp the Gizmo to world space orientation.
+				Unit Snapping
+					edit -> Snap Setting 
+				Surface Snapping
+					While dragging in the center using the Translate Tool, you can hold Shift and Control (Command on Mac) to snap the object to the intersection of any Collider.
+				Look-At Rotation
+					While using the Rotate Tool, you can hold Shift and Control (Command on Mac) to rotate the object towards a point on the surface of any Collider.
+				Vertex Snapping
+					Using vertex snapping in Unity is simple. Just follow these steps:
+						Select the mesh you want to manipulate and make sure the Transform Tool is active.
+						Press and hold the V key to activate the vertex snapping mode.
+						Move your cursor over the vertex on your mesh that you want to use as the pivot point.
+						Hold down the left button once your cursor is over the desired vertex and drag your mesh next to any other vertex on another mesh.
+						Release your mouse button and the V key when you are happy with the results.
+						Shift-V acts as a toggle of this functionality.
+						You can snap vertex to vertex, vertex to surface and pivot to vertex.
+			3. Scene View Control Bar
+				Draw Mode 
+					The first drop-down menu selects which Draw Mode will be used to depict the scene. The available options are:
+						Shading Mode 
+							Shaded: show surfaces with their textures visible.
+							Wireframe: draw meshes with a wireframe representation.
+							Shaded Wireframe: show meshes textured and with wireframes overlaid.
+						Miscellaneous 
+							Shadow Cascades: show directional light shadow cascades.
+							Render Paths: show the rendering path for each object using a color code: 
+								Blue indicates deferred shading, Green indicates deferred lighting, yellow indicates forward rendering and red indicates vertex lit.
+							Alpha Channel: render colors with alpha.
+							Overdraw: render objects as transparent “silhouettes”. The transparent colors accumulate, making it easy to spot places where one object is drawn over another.
+							Mipmaps: show ideal texture sizes using a color code: red indicates that the texture is larger than necessary (at the current distance and resolution); 
+								blue indicates that the texture could be larger. Naturally, ideal texture sizes depend on the resolution at which the game will run and how close the camera can get to particular surfaces.
+						Deferred 
+							These modes let you view each of the elements of the G-buffer (Albedo, Specular, Smoothness and Normal) in isolation. See the page on Deferred Shading for further details.
+						Global illumination 
+							The following modes are available to help visualise aspects of the Global Illumination system: UV Charts, Systems, Albedo, Emissive, Irradiance, Directionality and Baked. 
+							These modes are described with examples on the GI Visualisations page.
+				2D, Lighting and Audio Switches
+					To the right of the render mode menu are three buttons that switch certain scene view options on or off:
+						2D: switches between 2D and 3D view for the scene. In 2D mode the camera is oriented looking towards positive z, with the x axis pointing right and the y axis pointing up.
+						Lighting: turns scene view lighting (lights, object shading, etc) on or off.
+						Audio: turns scene view audio effects on or off.
+				Effects Button and Menu
+					The menu (activated by the small mountain icon to the right of the Audio button) has options to enable or disable rendering effects in the scene view.
+						Skybox: a skybox texture rendered in the scene’s background
+						Fog: gradual fading of the view to a flat color with distance from the camera.
+						Flares: lens flares on lights.
+						Animated Materials: should animated materials show the animation?
+				Gizmos Menu
+					Gizmos are graphics added to the scene (either by Unity itself or from your own scripts) that help with visualisation and identification of items in the game world.
+					Script Reference page for the OnDrawGizmos function
+					The 3D Gizmos checkbox determines whether gizmos are shown in true 3D (with correct obscuration and perspective) or as a simple overlay on top of other scene graphics. 
+						The slider to its right adjusts the scale of gizmo icons relative to other objects. The Show Grid checkbox below switches the standard scene measurement grid on and off.
+					Icon and Gizmo columns to the right. 
+				search box
+		3. The Game View
+			play mode 
+			game view control bar 
+				free aspect 
+				maximize on play 
+				mute audio 
+				stats 
+				gizmos 
+		4. The Hierarchy Window
+			parenting 
+			alphanumeric sorting 
+				Unity->Preferences menu (Mac) which launches the Unity Preferences window. The “Enable Alpha Numeric Sorting” can be ticked.
+			multi-scene editing 
+		5. The Inspector Window
+			Inspecting Game Objects 
+			Inspecting Script Variables
+			Inspecting Assets
+			Project Settings
+				Editor -> Project Settings
+				Settings Managers 
+			1. Editing Properties
+			2. Preset Libraries
+			3. Inspector Options
+				> Add tab ; lock 
+		6. The Toolbar
+			Transform Tools – used with the Scene View
+			Transform Gizmo Toggles – affect the Scene View display
+			Play/Pause/Step Buttons – used with the Game View
+			Cloud Button - opens the Unity Services Window.
+			Account Drop-down - used to access your Unity Account.
+			Layers Drop-down – controls which objects are displayed in Scene View
+			Layout Drop-down – controls arrangement of all Views
+		7. Searching
+			Scene Search
+			Project Search and Labels
+		8. Other Windows
+			The Console Window shows logs of messages, warnings, and errors.
+			The Animation Window can be used to animate objects in the scene.
+			The Profiler Window can be used to investigate and find the performance bottle-necks in your game.
+			The Lighting Window can be used to manage the lighting in your scene.
+			The Occlusion Culling Window can be used to manage Occlusion Culling for improved performance.
+		9. Customizing Your Workspace
+		10. Unity Hotkeys
+			
+			Tools
+				Keystroke-Command
+				Q	Pan
+				W	Move
+				E	Rotate
+				R	Scale
+				T	Rect Tool
+				Z	Pivot Mode toggle
+				X	Pivot Rotation Toggle
+				V	Vertex Snap
+				CTRL/CMD+LMB	Snap
+			
+			GameObject
+				CTRL/CMD+SHIFT+N	New game object
+				CTRL/CMD+ALT+F	Move to view
+				CTRL/CMD+SHIFT+F	Align with view
+				SHIFT+F or double-F	Locks the scene view camera to the selected GameObject
+			
+			Window
+				CTRL/CMD+1	Scene
+				CTRL/CMD+2	Game
+				CTRL/CMD+3	Inspector
+				CTRL/CMD+4	Hierarchy
+				CTRL/CMD+5	Project
+				CTRL/CMD+6	Animation
+				CTRL/CMD+7	Profiler
+				CTRL/CMD+9	Asset store
+				CTRL/CMD+0	Version Control
+				CTRL/CMD+SHIFT+C	Console
+			
+			Edit
+				CTRL/CMD+Z	Undo
+				CTRL+Y (Windows only)	Redo
+				CMD+SHIFT+Z (Mac only)	Redo
+				CTRL/CMD+X	Cut
+				CTRL/CMD+C	Copy
+				CTRL/CMD+V	Paste
+				CTRL/CMD+D	Duplicate
+				SHIFT+Del	Delete
+				F	Frame (centre) selection
+				CTRL/CMD+F	Find
+				CTRL/CMD+A	Select All
+				CTRL/CMD+P	Play
+				CTRL/CMD+SHIFT+P	Pause
+				CTRL/CMD+ALT+P	Step
+					
+			Assets
+				CTRL/CMD+R	Refresh
+				
+	4. Creating Gameplay
+		1. Scenes
+			Think of each unique Scene file as a unique level. 
+			Multi-Scene Editing.
+			Opening Scenes
+		2. GameObjects
+			What are GameObjects?
+				Every object in your game is a GameObject.
+				They need special properties before they can become a character, an environment, or a special effect.
+			What makes these GameObjects different from each other?
+				GameObjects are containers. 
+				They can hold the different pieces that are required to make up a character, a light, a tree, a sound, or whatever else you would like to build.
+				Components
+				
+			1. GameObject
+			2. Introduction to Components
+				Transform Component
+					impossible to create a GameObject in Unity without a Transform Component. 
+					Transform Component also enables a concept called Parenting
+				Other Components
+					Main Camera GameObject
+					GUILayer, a Flare Layer, and an Audio Listener.
+			3. Using Components
+				Adding Components
+				Editing Components
+				component context menu commands 
+					reset 
+					remove 
+					move up/down 
+					copy/paste 
+				Testing out properties 
+					While your game is in Play Mode, you are free to change properties in any GameObject’s Inspector
+			4. Transform
+				The position, rotation and scale values of a Transform are measured relative to the Transform’s parent. 
+					If the Transform has no parent, the properties are measured in world space.			
+				Property:	Function:
+				Position	Position of the Transform in X, Y, and Z coordinates.
+				Rotation	Rotation of the Transform around the X, Y, and Z axes, measured in degrees.
+				Scale	Scale of the Transform along X, Y, and Z axes. Value “1” is the original size (size at which the object was imported).
+			5. Creating Components
+			6. Deactivating GameObjects
+				Effect of deactivating a parent GameObject
+					When a parent object is deactivated, the deactivation also overrides the activeSelf setting on all its child objects, 
+					so the whole hierarchy from the parent down is made inactive
+				In the unusual case where you actually want the children’s activeSelf settings to be changed, you can use code like the following:-
+					// JavaScript
+					function DeactivateChildren(g: GameObject, a: boolean) {
+						g.activeSelf = a;
+	
+						for (var child: Transform in g.transform) {
+							DeactivateChildren(child.gameObject, a);
+						}
+					}
+
+
+					// C#
+					void DeactivateChildren(GameObject g, bool a) {
+						g.activeSelf = a;
+	
+						foreach (Transform child in g.transform) {
+							DeactivateChildren(child.gameObject, a);
+						}
+					}	
+			7. Tags
+				A Tag is a word which you link to one or more GameObjects
+				Clearly, Tags are intended to identify GameObjects for scripting purposes. 
+				We can use them to write script code to find a GameObject by looking for any object that contains our desired Tag. 
+				This is achieved using the GameObject.FindWithTag() function.
+				For example 
+					// Instantiates respawnPrefab at the location 
+					// of the game object with tag "Respawn"
+
+					//JS
+
+					var respawnPrefab : GameObject;
+					var respawn = GameObject.FindWithTag ("Respawn");
+					Instantiate (respawnPrefab, respawn.position, respawn.rotation);
+
+
+					//C#
+
+					using UnityEngine;
+					using System.Collections;
+
+					public class Example : MonoBehaviour {
+						public GameObject respawnPrefab;
+						public GameObject respawn;
+						void Start() {
+							if (respawn == null)
+								respawn = GameObject.FindWithTag("Respawn");
+		
+							Instantiate(respawnPrefab, respawn.transform.position, respawn.transform.rotation) as GameObject;
+						}
+					}
+					
+				Another example is a TriggerCollider control script which needs to work out whether the player is interacting with an enemy, 
+					as opposed to, say, a random prop or collectable item. Tags make this kind of test easy.
+				Applying a Tag
+					The Inspector will show the Tag and Layer->Layers drop-down menus just below any GameObject’s name
+				Creating new Tags
+				Hints
+					A GameObject can only have one Tag assigned to it.
+					Unity includes some built-in Tags which do not appear in the Tag Manager:
+						“Untagged”
+						“Respawn”
+						“Finish”
+						“EditorOnly”
+						“MainCamera”
+						“Player”
+						and “GameController”.
+					You can use any word you like as a Tag. (You can even use short phrases, but you may need to widen the Inspector to see the tag’s full name.)
+			8. Static GameObjects
+				Many optimisations need to know if an object can move during gameplay. 
+				Information about a Static (ie, non-moving) object can often be precomputed in the editor in the knowledge that it will not be invalidated by a change in the object’s position.
+				For example, rendering can be optimised by combining several static objects into a single, large object known as a batch.
+				The inspector for a GameObject has a Static checkbox and menu in the extreme top-right, which is used to inform various different systems in Unity that the object will not move. 
+				The object can be marked as static for each of these systems individually, so you can choose not to calculate static optimisations for an object when it isn’t advantageous.
+				Static Settings
+					The Everything and Nothing enable or disable static status simultaneously for all systems that make use of it. These systems are:
+						Lightmapping: advanced lighting for a scene;
+						Occluder and Occludee: rendering optimization based on the visibility of objects from specific camera positions;
+						Batching: rendering optimization that combines several objects into one larger object;
+						Navigation: the system that enables characters to negotiate obstacles in the scene;
+						Off-mesh Links: connections made by the Navigation system between discontinuous areas of the scene.
+						Reflection Probe: captures a spherical view of its surroundings in all directions.
+			9. Prefabs
+				Prefab asset type that allows you to store a GameObject object complete with components and properties. 
+				The prefab acts as a template from which you can create new object instances in the scene. 
+				Any edits made to a prefab asset are immediately reflected in all instances produced from it but you can also override components and settings for each instance individually.
+				Using Prefabs
+					create a prefab by selecting Asset > Create Prefab and then dragging an object from the scene onto the “empty” prefab asset that appears.
+					Objects created as prefab instances will be shown in the hierarchy view in blue text.
+					To make it clear when a property has been overridden, it is shown in the inspector with its name label in boldface.
+				Editing a Prefab from its Instances
+					The inspector for a prefab instance has three buttons not present for a normal object: Select, Revert and Apply.
+					The Select button selects the prefab asset from which the instance was generated. 
+					This allows you to edit the main prefab and thereby change all its instances. 
+					However, you can also save overridden values from an instance back to the originating prefab using the Apply button (modified Transform position and rotation values are excluded for obvious reasons). 
+					This effectively lets you edit all instances (except those which override the value changed) via any single instance and is a very quick and convenient way to make global changes. 
+					If you experiment with overriding properties but then decide you preferred the default values, you can use the Revert button to realign the instance with its prefab.
+			10. Saving Your Work
+				Saving changes to the current scene (“Save Scene”)
+				Saving project-wide changes (“Save Project”)
+					Some changes that you can make in Unity are not scene-specific, they are project-wide. These settings can be saved independently of the scene changes, by selecting “Save Project” from the file menu.
+					Using “Save Project” does not save changes to your Scene, only the project-wide changes are saved. 
+					The project-wide changes which are saved when you “Save Project” include:
+						All the “Project Settings”:
+							such as custom input axes, user-defined tags or layers, and the physics gravity strength are saved when you “Save Project”.
+							Changes to these settings are saved in the Library folder when the Project is saved:
+								Input: saved as ´InputManager.asset´
+								Tags And Layers: saved as ´TagManager.asset´
+								Audio: saved as ´AudioManager.asset´
+								Time: saved as ´TimeManager.asset´
+								Player: saved as ´ProjectSettings.asset´
+								Physics: saved as ´DynamicsManager.asset´
+								Physics 2D: saved as ´Physics2DSettings.asset´
+								Quality: saved as ´QualitySettings.asset´
+								Graphics: saved as ´GraphicsSettings.asset´
+								Network: saved as ´NetworkManager.asset´
+								Editor: saved as ´EditorUserSettings.asset´
+						The “Build Settings”
+							Build Settings are also saved in the Library folder as ´EditorBuildSettings.asset´.
+						Changes to assets in the Project Window
+							Also saved along with project-wide settings are changes to assets that do not have an “apply” button, for example changes to any of the following:
+								Material parameters
+								Prefabs
+								Animator Controllers (state machines)
+								Avatar Masks
+								Any other asset changes that do not have an “apply” button
+				Changes that are immediately written to disk (no save required):
+					Changes to any import setting requiring the user to press an “apply” button
+						The import settings for most asset types require that you press an “Apply” button for the changes to take effect. 
+						This causes the asset to be re-imported according to the new settings. 
+						These changes are saved immediately when you hit the Apply button.
+						For example:
+							Changing the texture type of an image asset
+							Changing the scale factor of an 3D model asset
+							Changing the compression settings of an audio asset
+							Any other import setting change which has an “apply” button
+					
+					Other changes which are saved immediately:
+						A few other types of data are saved to disk immediately or automatically without the need to perform a “Save” action:
+							The creation of new assets, eg: new materials or prefabs (But not subsequent changes to those assets)
+							Baked Lighting data (saved when the bake completes).
+							Baked navigation data (saved when the bake completes)
+							Baked occlusion culling data (saved when the bake completes)
+							Script execution order changes (after “apply” is pressed, this data is saved in each script’s .meta file)
+		3. Instantiating Prefabs at runtime
+			// on the website there are codes look into it 
+			Assets->Create Prefab
+				Drag the root GameObject containing all the airplane parts into the Prefab
+			Prefabs come in very handy when you want to instantiate complicated GameObjects at runtime.
+			advantages of prefabs 
+				You can instantiate a Prefab from one line of code, with complete functionality. 
+					Creating equivalent GameObjects from code takes an average of five lines of code, but likely more.
+				You can set up, test, and modify the Prefab quickly and easily in the Scene and Inspector.
+				You can change the Prefab being instanced without changing the code that instantiates it. 
+					A simple rocket might be altered into a super-charged rocket, and no code changes are required.
+			Common Scenarios
+				Building a wall
+					Building a wall out of a single “brick” Prefab by creating it several times in different positions.
+					Example without prefab : 
+						//  Every additional action to want to perform on the brick, like changing the texture, the friction, or the Rigidbody mass, is an extra line.
+						public class Instantiation : MonoBehaviour {
+							void Start() {
+								for (int y = 0; y < 5; y++) {
+									for (int x = 0; x < 5; x++) {
+										GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+										cube.AddComponent<Rigidbody>();
+										cube.transform.position = new Vector3(x, y, 0);
+									}
+								}
+							}
+						}
+					
+					Example with prefab :
+						public Transform brick;
+
+							void Start() {
+								for (int y = 0; y < 5; y++) {
+									for (int x = 0; x < 5; x++) {
+										Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity);
+									}
+								}
+							}
+				Instantiating rockets & explosions
+					Here’s how Prefabs fit into this scenario:
+						A rocket launcher instantiates a rocket Prefab when the user presses fire. 
+							The Prefab contains a mesh, Rigidbody, Collider, and a child GameObject that contains a trail particle system.
+						The rocket impacts and instantiates an explosion Prefab. 
+							The explosion Prefab contains a Particle System, a light that fades out over time, and a script that applies damage to surrounding GameObjects.
+					how to launch a rocket using the Instantiate() function : 
+						// Require the rocket to be a rigidbody.
+						// This way we the user can not assign a prefab without rigidbody
+						public Rigidbody rocket;
+						public float speed = 10f;
+
+						void FireRocket () {
+							Rigidbody rocketClone = (Rigidbody) Instantiate(rocket, transform.position, transform.rotation);
+							rocketClone.velocity = transform.forward * speed;
+	
+							// You can also acccess other components / scripts of the clone
+							rocketClone.GetComponent<MyRocketScript>().DoSomething();
+						}
+
+						// Calls the fire method when holding down ctrl or mouse
+						void Update () {
+							if (Input.GetButtonDown("Fire1")) {
+								FireRocket();
+							}
+						}
+				Replacing a character with a ragdoll or wreck
+					 better approach is to immediately delete the entire character and replace it with an instantiated wrecked prefab.
+					 IEnumerator Start()
+					 yield return new WaitForSeconds(3);
+					 wreckClone.GetComponent<MyScript>().someVariable = GetComponent<MyScript>().someVariable;
+					 KillSelf();
+					 Destroy(gameObject);
+				Placing a bunch of objects in a specific pattern
+					Mathf.PI
+					Mathf.Cos(angle)
+		4. Input
+			1. Conventional Game Input
+				Virtual axes and buttons can be created in the Input Manager, and end users can configure Keyboard input in a nice screen configuration dialog.
+				Virtual Axes
+					Adding new Input Axes
+						If you want to add new virtual axes go to the Edit->Project Settings->Input menu. 
+						Property | functions 
+							http://docs.unity3d.com/Manual/ConventionalGameInput.html
+					Using Input Axes from Scripts 
+						 value = Input.GetAxis ("Horizontal"); 
+						 An axis has a value between –1 and 1. The neutral position is 0. This is the case for joystick input and keyboard input.
+						 However, Mouse Delta and Window Shake Delta are how much the mouse or window moved during the last frame. 
+						 	This means it can be larger than 1 or smaller than –1 when the user moves the mouse quickly.
+						 It is possible to create multiple axes with the same name. When getting the input axis, the axis with the largest absolute value will be returned. 
+				Button Names 
+					To map a key to an axis, you have to enter the key’s name in the Positive Button or Negative Button property in the Inspector.
+				keys
+					http://docs.unity3d.com/Manual/ConventionalGameInput.html
+					value = Input.GetKey ("a");
+					Note also that the keys are accessible using the KeyCode enum parameter.
+			2. Mobile Device Input
+				Multi-Touch Screen 
+					The iPhone and iPod Touch devices are capable of tracking up to five fingers touching the screen simultaneously. 
+						You can retrieve the status of each finger touching the screen during the last frame by accessing the Input.touches property array.
+					Each finger touch is represented by an Input.Touch data structure:
+					property | functions 
+						http://docs.unity3d.com/Manual/MobileInput.html
+					example script which will shoot a ray whenever the user taps on the screen:
+				Mouse Simulation 
+				Accelerometer 
+					example script which will move an object using the accelerometer:
+				Low-Pass Filter 
+					example script shows you how to apply low-pass filtering to accelerometer readings:
+					Mathf.Lerp(lowPassValue, Input.acceleration, LowPassFilterFactor);
+						http://docs.unity3d.com/ScriptReference/Mathf.Lerp.html
+				I'd like as much precision as possible when reading the accelerometer. what should I do ? 
+			3. Mobile Keyboard
+				GUI Elements 
+					The keyboard will appear automatically when a user taps on editable GUI elements.
+				Manual Keyboard Handling 
+				Keyboard Layout Options 
+				Text Preview 
+				Visibility and Keyboard Size 
+				Secure Text Input 
+				Alert Keyboard 
+		5. Transforms
+			Editing Transforms 
+			Parenting 
+			Performance Issues and Limitations with Non-Uniform Scaling 
+			Importance of Scale 
+			Tips for working with Transform 
+		6. Adding Random Gameplay Elements
+			Choosing a Random Item from an Array 
+			Choosing Items with different probabilities 
+			weighting continuous random values 
+			shuffling a list 
+			choosing from a Set of Items without repetition 
+			random points in Space 
+		7. Rotation and Orientation in Unity
+			Summary 
+			The difference between euler angles and quaternions 
+				euler angles 
+				quaternions 
+			Implications for Scripting 
+				creating and manipulating quaternions directly 
+					Creating:
+						Quaternion.LookRotation
+						Quaternion.AngleAxis
+						Quaternion.FromToRotation		
+					Manipulating:
+						Quaternion.Slerp
+						Quaternion.Inverse
+						Quaternion.RotateTowards
+						Transform.Rotate & Transform.RotateAround
+			Implications for Animation 
+				Unity's Animation Window 
+				External Animation Sources 
+		8. Trouble Shooting
+			Platform Trouble Shooting 
+				Geforce 7300GT on OSX 10.6.4
+				On Windows x64, Unity crashes when my script throws a NullReferenceException 
+				Script Editing 
+					Is there a way to get rid of the welcome page in MonoDevelop ? 
+					Why does my script open in MonoDevelop when I have selected Visual Studio as my script editor?
+				Graphics
+					Slow framerate and/or visual artifacts.
+				Shadows
+					Some of my objects do not cast or receive shadows
+		9. Lights
+			Rendering paths
+		10. Cameras
+		11. Cross-Platform Considerations
+			Input
+				Keyboard and joypad
+				Touches and clicks
+				Accelerometer, compass, gyroscope and GPS
+			Memory, storage and CPU performance
+				Movie playback
+				Storage requirements
+				Automatic memory management
+				CPU power
+		12. Publishing Builds
+			Building standalone players
+			Inside the build process
+			Preloading
+			You’re ready to build games
+	5. Editor Features
+		1. 2D and 3D Mode Settings
+			Switching Between 3D and 2D Modes
+			2D vs 3D Mode Settings
+				In 2D Project Mode:
+					Any images you import are assumed to be 2D images (Sprites) and set to Sprite mode.
+					The Sprite Packer is enabled.
+					The Scene View is set to 2D.
+					The default game objects do not have real time, directional light.
+					The camera’s default position is at 0,0,–10. (It is 0,1,–10 in 3D Mode.)
+					The camera is set to be Orthographic. (In 3D Mode it is Perspective.)
+					In the Lighting Window:
+					Skybox is disabled for new scenes.
+					Ambient Source is set to Color. (With the color set as a dark grey: RGB: 54, 58, 66.)
+					Precomputed Realtime GI is set to off.
+					Baked GI is set to off.
+					Auto-Building set to off.
+				In 3D Project Mode:
+					Any images you import are NOT assumed to be 2D images (Sprites).
+					The Sprite Packer is disabled.
+					The Scene View is set to 3D.
+					The default game objects have real time, directional light.
+					The camera’s default position is at 0,1,–10. (It is 0,0,–10. in 2D Mode.)
+					The camera is set to be Perspective. (In 2D Mode it is Orthographic.)
+					In the Lighting Window:
+					Skybox is the built-in default Skybox Material.
+					Ambient Source is set to Skybox.
+					Precomputed Realtime GI is set to on.
+					Baked GI is set to on.
+					Auto-Building is set to on.
+		2. Preferences
+			General
+			External Tools
+			Colors
+			Keys
+			GI Cache
+			2D
+			Cache Server
+		3. Build Settings
+			Scenes in Build
+			Platform List
+				Web Player
+				PC, Mac & Linux Standalone
+				iOS
+				Android
+				Tizen
+				WebGL (Preview)
+				Samsumg TV
+				Windows Store
+				Windows Phone
+				Other platforms
+				Generic items across builds
+		4. Settings Managers
+			1. Audio Manager
+				Properties
+				Details
+			2. Editor settings
+				Properties
+			3. Input Manager
+				Properties
+				Details
+			4. Network Manager
+				Properties
+				Details
+			5. Physics Manager
+				Properties
+				Details
+			6. Physics 2D Manager
+				Properties
+				Details
+			7. Player Settings
+				General Settings
+				1. Splash Screen
+					personal edition 
+					pro edition 
+			8. Quality Settings
+				MaximumLOD level
+				Tearing
+				Anti-aliasing
+				Soft Particles
+			9. Graphics Settings
+				Built-in shader settings
+				Always Included Shaders
+				Shader Stripping
+				Shader Preloading
+			10. Script Execution Order Settings
+			11. Tags and Layers
+				Details 
+			12. Time Manager
+				Properties
+				Details
+		5. Network Emulation
+			Technical Details
+		6. Visual Studio C# Integration
+			What does this feature get me?
+			I’ve got Visual Studio Express, how do I use it?
+			I’ve got Visual Studio Profesional, how do I use it?
+			A few things to watch out for:
+		7. RenderDoc Integration
+			Loading RenderDoc
+			Capturing a frame with RenderDoc
+		8. Editor Analytics
+			Examples of collected data
+				The following are examples of data that Unity might collect.
+					Which menu items have been used. If some menu items are used rarely or not at all we could in the future simplify the menuing system.
+					Build times. By collecting how long builds take to make we can focus engineering effort on optimizing the correct code.
+					Lightmap baking. Again, timing and reporting how long it takes for light maps to bake can help us decide how much effort to spend on optimizing this area.
+			Disabling Editor Analytics
+		9. Check For Updates
+			Update Check Frequency
+			Skipping Update Versions
+			Disabling the Update Check
+		10. IME in Unity
+			What is Input Method Editor (IME)?
+			IME and Unity
+			iOS
+			Android
+		11. Special Folder Names
+			Assets
+			Editor
+			Editor Default Resources
+			Gizmos
+			Plugins
+			Resources
+			Standard Assets
+			StreamingAssets
+			WebPlayerTemplates
+			Hidden Assets
+		12. Exporting Packages
+			Exporting New Packages
+			Exporting Updated Packages
+		13. Version Control
+			1. Version control integration (Team License)
+				Why should I use version control?
+				Setting up your version control in Unity
+				Using version control
+				Version Control Window
+				Icons
+				Automatic revert of unchanged files on submit
+				Offline Mode
+				Troubleshooting
+				Working with the Asset Server
+				Working with other version control systems
+			2. Perforce Integration
+				Setting up Perforce
+				Working Offline with Perforce
+				Troubleshooting
+				Automatic revert of unchanged files on submit
+			3. Plastic SCM Integration
+				Setting up Plastic SCM
+				Checking Files Out with Plastic SC
+				Resolving Conflicts and Merging with Plastic SCM
+				Locking Files with Plastic SCM
+				Distributed and offline work with Plastic SCM
+			4. Using External Version Control Systems with Unity
+				Example: Creating a new project and importing it to a Subversion repository.
+			5. Smart Merge
+				Setting Up Smart Merging in Unity
+				Setting up UnityYAMLMerge for Use with Third Party Tools
+					P4V
+					Git
+					Mercurial
+					SVN
+					TortoiseGit
+					PlasticSCM
+		14. Troubleshooting The Editor
+			Versions
+			Activation
+			Failure to Start
+				Fonts
+				Corrupt Project or Installation
+			Performance and Crashes
+			Project Loss
+			Re-installation
+	6. Advanced Development
+		1. The Profiler Window
+			1. Profiler window
+			2. CPU Usage Area
+			3. Rendering Area
+			4. Memory Area
+			5. Audio Area
+			6. Physics Profiler
+			7. GPU Area
+		2. Multi Scene Editing
+		3. Loading Resources at Runtime
+		4. Plugins
+			1. Plugin Inspector
+			2. Managed Plugins
+			3. Native Plugins
+			4. Building Plugins for Desktop Platforms
+			5. Low-level Native Plugin Interface
+		5. AssetBundles
+			1. Building Asset Bundles
+			2. Asset Bundle Compression
+			3. Asset Bundle Internal Structure
+			4. Downloading AssetBundles
+			5. Loading and unloading objects from an AssetBundle
+			6. Keeping Track of loaded AssetBundles
+			7. Storing and loading binary data in an AssetBundle
+			8. Protecting Content
+			9. Including scripts in AssetBundles
+			10. AssetBundles FAQ
+		6. Reducing the File Size of the Build
+		7. Social API
+		8. JSON Serialization
+		9. Streaming Assets
+		10. ScriptableObject
+	7. Advanced Editor Topics
+		1. Build Player Pipeline
+		2. Command line arguments
+		3. Behind the Scenes
+		4. AssetDatabase
+		5. Text-Based Scene Files
+			1. Description of the Format
+			2. An Example of a YAML Scene File
+			3. YAML Class ID Reference
+		6. Cache Server (Team License)
+		7. Modifying Source Assets Through Scripting
+		8. Extending the Editor
+			1. Editor Windows
+			2. Property Drawers
+			3. Custom Editors
+		9. Running Editor Script Code on Launch
+	8. Licenses and Activation
+		1. Online Activation
+		2. Offline / Manual Activation
+		3. Managing your License
+		4. Activation FAQ
+	9. Upgrade Guides
+
+________________________________
+________________________________
+
+
+2. Unity 2D
+
+	1. Gameplay in 2D
+	2. Sprites
+	3. 2D Physics Reference
+	4. Physics 2D Raycaster
+
+________________________________	
+
+2. Unity 2D
+	1. Gameplay in 2D
+		1. 2D Graphics 
+		2. 2D Physics
+	2. Sprites
+		1. Sprite Creator
+			1. Accessing the Sprite Creator 
+			2. Using the Sprite
+			3. Replacing your Placeholder Sprite 
+			4. Details 
+		2. Sprite Editor
+			1. Opening the Sprite Editor 
+			2. Using the Editor 
+			3. Automatic Slicing 
+			4. Polygon Resizing 
+				1. Shape 
+				2. Size Pivot 
+		3. Sprite Packer
+			For optimal performance, it is best to pack graphics from several sprite textures tightly together within a single texture known as an atlas.
+			Unity provides a Sprite Packer utility to automate the process of generating atlases from the individual sprite textures.
+			Users are required to specify a Packing Tag in the Texture Importer to enable packing for Sprites of that Texture.
+			
+			1. Using the Sprite Packer 
+				Edit -> Project Settings -> Editor
+				Window -> Sprite Packer
+					click the Pack button in the top-left corner, you will see the arrangement of the textures packed within the atlas.
+				The Pack buttons initiates the packing operation but will not force any update if the atlas hasn’t changed since it was last packed.
+			2. Packing Policy 
+				The Sprite Packer uses a packing policy to decide how to assign sprites into atlases. 
+				With these policies, the Packing Tag property in the Texture Importer directly selects the name of the atlas 
+					where the sprite will be packed and so all sprites with the same packing tag will be packed in the same atlas.
+					Atlases are then further sorted by the texture import settings so that they match whatever the user sets for the source textures. 
+					Sprites with the same texture compression settings will be grouped into the same atlas where possible.
+			3. Customizing the Sprite Packer 
+				you can also implement your own custom packing policy if you need to. To do this, you need to implement the UnityEditor.Sprites.IPackerPolicy interface for a class in an editor script. 
+				This interface requires the following methods:
+					GetVersion - return the version value of your packer policy. Version should be bumped if modifications are done to the policy script and this policy is saved to version control.
+					OnGroupAtlases - implement your packing logic here. Define atlases on the PackerJob and assign Sprites from the given TextureImporters.
+			4. Other 
+			5. DefaultPackerPolicy 
+				DefaultPackerPolicy will use rectangle packing by default unless “[TIGHT]” is specified in the Packing Tag (i.e. setting your packing tag to “[TIGHT]Character” will allow tight packing).
+			6. TightPackerPolicy
+				TightPackerPolicy will use tight packing by default if Sprite have tight meshes. 
+					If “[RECT]” is specified in the Packing Tag, rectangle packing will be done (i.e. setting your packing tag to “[RECT]UI_Elements” will force rect packing). 
+			7. TightRotateEnabledSpritePackerPolicy
+				TightRotateEnabledSpritePackerPolicy will use tight packing by default if Sprite have tight meshes and will enable rotation of sprites. 
+					If “[RECT]” is specified in the Packing Tag, rectangle packing will be done (i.e. setting your packing tag to “[RECT]UI_Elements” will force rect packing).
+	3. 2D Physics Reference
+		1. Rigidbody 2D
+			1. Property | Function 
+			2. Details 
+			3. Kinematic Rigidbodies 
+		2. Collider 2D
+			1. Circle Collider 2D
+				1. Property | Function 
+			2. Box Collider 2D
+				1. Property | Function 
+			3. Polygon Collider 2D
+				1. Property | Function 
+				2. Details
+			4. Edge Collider 2D
+				1. Property | Function 
+				2. Details 
+			5. Physics Material 2D
+				1. Properties 
+				2. Details 
+		3. 2D Joints
+			1. Distance Joint 2D
+				1. Property | Function 
+				2. Details 
+			2. Fixed Joint 2D
+				1. Property | Function 
+				2. Details
+				3. Fixed vs. Relative joint
+			3. Friction Joint 2D
+				1. Property | Function 
+				2. Details
+			4. Hinge Joint 2D
+				1. Property | Function 
+				2. Details
+			5. Relative Joint 2D
+				1. Property | Function 
+				2. Details
+				3. Fixed vs Relative joint 
+			6. Slider Joint 2D
+				1. Property | Function 
+				2. Details
+			7. Spring Joint 2D
+				1. Property | Function 
+				2. Details
+			8. Target Joint 2D
+				1. Property | Function 
+				2. Details
+			9. Wheel Joint 2D
+				1. Property | Function 
+				2. Details
+				3. Hints
+		4. Constant Force 2D
+			1. Property | Function 
+		5. Area Effector 2D
+			1. Property | Function 
+		6. Buoyancy Effector 2D
+			1. Property | Function 
+		7. Point Effector 2D
+			1. Property | Function 
+		8. Platform Effector 2D
+			1. Property | Function 
+		9. Surface Effector 2D
+			1. Property | Function 
+	4. Physics 2D Raycaster
+		1. Property | Function 
+
+
+
+
+________________________________
+________________________________
+
+3. Physics
+
+	1. Physics Overview
+	2. 3D Physics Reference
+	3. 2D Physics Reference
+	4. Physics HOWTOs
+	5. WheelCollider Tutorial
+
+________________________________	
+
+
+3. Physics
+	1. Physics Overview
+		1. Rigidbodies
+			Rigidbody is the main component that enables physical behaviour for an object. 
+			With a Rigidbody attached, the object will immediately respond to gravity. 
+			If one or more Collider components are also added then the object will be moved by incoming collisions.
+			Since a Rigidbody component takes over the movement of the object it is attached to, 
+				you shouldn’t try to move it from a script by changing the Transform properties such as position and rotation. 
+				Instead, you should apply forces to push the object and let the physics engine calculate the results.
+			There are some cases where you might want an object to have a Rigidbody without having its motion controlled by the physics engine. 
+				For example, you may want to control your character directly from script code but still allow it to be detected by triggers (see Triggers below). 
+				This kind of non-physical motion produced from a script is known as kinematic motion. 
+				The Rigidbody component has a property called Is Kinematic which will remove it from the control of the physics engine and allow it to be moved kinematically from a script. 
+				It is possible to change the value of Is Kinematic from a script to allow physics to be switched on and off for an object, 
+				but this comes with a performance overhead and should be used sparingly.
+			Sleeping
+				Once a rigidbody is moving at less than a certain minimum linear or rotational speed, the physics engine will assume it has come to a halt. 
+				When this happens, the object will not move again until it receives a collision or force and so it will be set to “sleeping” mode. 
+				This optimisation means that no processor time will be spent updating the rigidbody until the next time it is “awoken” (ie, set in motion again). 
+				For most purposes, the sleeping and waking of rigidbodies happens transparently. 
+				However, an object might fail to wake up if a static collider (ie, one without a rigidbody) is moved into it or away from it by modifying the transform position. 
+				This might result, say, in the rigidbody object hanging in the air when the floor has been moved out from beneath it. 
+				In cases like this, the object can be woken explicitly using the WakeUp function.
+		2. Colliders
+			Collider components define the shape of an object for the purposes of physical collisions. A collider, which is invisible
+			The simplest (and least processor-intensive) colliders are the so-called primitive collider types. 
+			In 3D, these are the Box Collider, Sphere Collider and Capsule Collider. 
+			In 2D, you can use the Box Collider 2D and Circle Collider 2D. 
+			Any number of these can be added to a single object to create compound colliders
+			In 3D, you can use Mesh Colliders to match the shape of the object’s mesh exactly. 
+			In 2D, the Polygon Collider 2D will generally not match the shape of the sprite graphic perfectly but you can refine the shape to any level of detail you like.
+			mesh collider will normally be unable to collide with another mesh collider 
+			Colliders can be added to an object without a Rigidbody component to create floors, walls and other motionless elements of a scene. 
+				These are referred to as static colliders.
+			Physics materials
+				When colliders interact, their surfaces need to simulate the properties of the material they are supposed to represent.
+				their friction and bounce can be configured using Physics Materials.
+			Triggers
+				The scripting system can detect when collisions occur and initiate actions using the OnCollisionEnter function. 
+			Script actions taken on collision
+				When collisions occur, the physics engine calls functions with specific names on any scripts attached to the objects involved.
+				During updates where contact is maintained, OnCollisionStay is called and finally, OnCollisionExit indicates that contact has been broken. 
+				Trigger colliders call the analogous OnTriggerEnter, OnTriggerStay and OnTriggerExit functions.
+				Note that for 2D physics, there are equivalent functions with 2D appended to the name, eg, OnCollisionEnter2D. 
+					Full details of these functions and code samples can be found on the Script Reference page for the MonoBehaviour class.
+				If both objects are kinematic Rigidbodies then OnCollisionEnter, etc, will not be called. 
+				With trigger collisions, this restriction doesn’t apply and so both kinematic and non-kinematic Rigidbodies will prompt a call to OnTriggerEnter when they enter a trigger collider.
+			Collider interactions
+				Colliders interact with each other differently depending on how their Rigidbody components are configured. 
+				The three important configurations are the Static Collider (ie, no Rigidbody is attached at all), the Rigidbody Collider and the Kinematic Rigidbody Collider.
+				Static Collider
+					This is a GameObject that has a Collider but no Rigidbody. 
+				Rigidbody Collider
+					This is a GameObject with a Collider and a normal, non-kinematic Rigidbody attached.
+				Kinematic Rigidbody Collider
+					This is a GameObject with a Collider and a kinematic Rigidbody attached
+					You can move a kinematic rigidbody object from a script by modifying its Transform Component but it will not respond to collisions and forces like a non-kinematic rigidbody. 
+			Collision action matrix
+				file:///Applications/Unity/Unity.app/Contents/Documentation/en/Manual/CollidersOverview.html
+		3. Joints
+		4. Character Controllers
+	2. 3D Physics Reference
+		1. Box Collider
+		2. Capsule Collider
+		3. Character Controller
+		4. Character Joint
+		5. Configurable Joint
+		6. Constant Force
+		7. Fixed Joint
+		8. Hinge Joint
+		9. Mesh Collider
+		10. Rigidbody
+		11. Sphere Collider
+		12. Spring Joint
+		13. Cloth
+		14. Wheel Collider
+		15. Terrain Collider
+		16. Physic Material
+	3. 2D Physics Reference
+		1. Rigidbody 2D
+		2. Collider 2D
+			1. Circle Collider 2D
+			2. Box Collider 2D
+			3. Polygon Collider 2D
+			4. Edge Collider 2D
+			5. Physics Material 2D
+		3. 2D Joints
+			1. Distance Joint 2D
+			2. Fixed Joint 2D
+			3. Friction Joint 2D
+			4. Hinge Joint 2D
+			5. Relative Joint 2D
+			6. Slider Joint 2D
+			7. Spring Joint 2D
+			8. Target Joint 2D
+			9. Wheel Joint 2D
+		4. Constant Force 2D
+		5. Area Effector 2D
+		6. Buoyancy Effector 2D
+		7. Point Effector 2D
+		8. Platform Effector 2D
+		9. Surface Effector 2D
+	4. Physics HOWTOs
+		1. Ragdoll Wizard
+		2. Joint And Ragdoll Stability
+	5. WheelCollider Tutorial
+
+
+
+
+________________________________
+________________________________
+
+
+
+________________________________	
+
+4. UI
+	1. Canvas
+		Canvas is the area that all UI elements should be inside
+		Canvas is a Game Object with a Canvas component on it, and all UI elements must be children of such a Canvas.
+		Creating a new UI element, such as an Image using the menu GameObject > UI > Image, automatically creates a Canvas, 
+			if there isn’t already a Canvas in the scene
+		1. Draw order of elements 
+			UI elements in the Canvas are drawn in the same order they appear in the Hierarchy. 
+				The first child is drawn first, the second child next, and so on. 
+				If two UI elements overlap, the later one will appear on top of the earlier one.
+			The order can also be controlled from scripting by using these methods on the Transform component: SetAsFirstSibling, SetAsLastSibling, and SetSiblingIndex.
+		2. Render Modes 
+			1. Screen Space - Overlay 
+				This render mode places UI elements on the screen rendered on top of the scene. 
+				If the screen is resized or changes resolution, the Canvas will automatically change size to match this.
+			2. Screen Space - Camera 
+				in this render mode, the Canvas is placed a given distance in front of a specified Camera. 
+				The UI elements are rendered by this camera, which means that the Camera settings affect the appearance of the UI. 
+			3. World Space
+				In this render mode, the Canvas will behave as any other object in the scene. 
+				The size of the Canvas can be set manually using its Rect Transform, and UI elements will render in front of or behind other objects in the scene based on 3D placement. 
+				This is useful for UIs that are meant to be a part of the world. This is also known as a “diegetic interface”.
+	2. Basic Layout
+		1. The Rect Tool 
+			When working with UI it’s usually a good idea to keep those set to Pivot and Local.
+		2. Rect Transform 
+			1. Resizing Vs Scaling 
+				When the Rect Tool is used to change the size of an object, normally for Sprites in the 2D system and for 3D objects it will change the local scale of the object. 
+				However, when it’s used on an object with a Rect Transform on it, it will instead change the width and the height, keeping the local scale unchanged. 
+				This resizing will not affect font sizes, border on sliced images, and so on.
+			2. Pivot 
+				pivot affects the outcome of a rotation, resizing, or scaling.
+			3. Anchors 
+				Anchors are shown as four small triangular handles in the Scene View and anchor information is also shown in the Inspector.
+				UI element anchored to the center of the parent. The element maintains a fixed offset to the center.
+				The positions of the anchors are defined in fractions (or percentages) of the parent rectangle width and height. 
+				 If you hold down Shift key while dragging an anchor, the corresponding corner of the rectangle will move together with the anchor.
+			4. Anchor presets 
+			5. Anchor and position fields in the Inspector 
+				Anchor Min corresponds to the lower left anchor handle in the Scene View, and Anchor Max corresponds to the upper right handle.
+				The Pos X and Pos Y values indicate the position of the pivot relative to the anchors.
+				
+	3. Visual Components
+		1. Text 
+		2. Image 
+			1. Simple 
+			2. Sliced 
+			3. Tiled
+			4. Filled 
+		3. Raw Image 
+		4. Mask 
+		5. Effects 
+	4. Interaction Components
+		1. Common Functionality 
+		2. Button 
+			A Button has an OnClick UnityEvent to define what it will do when clicked.
+		3. Toggle 
+			A Toggle has an Is On checkbox that determines whether the Toggle is currently on or off. 
+			 OnValueCHanged UnityEvent to define what it will do when the value is changed.
+		4. Toggle Group 
+			Toggle Group can be used to group a set of Toggles that are mutually exclusive. 
+			Toggles that belong to the same group are constrained so that only one of them can be selected at a time - selecting one of them automatically deselects all the others.
+		5. Slider 
+			A Slider has a decimal number Value that the user can drag between a minimum and maximum value.
+			OnValueChanged UnityEvent to define what it will do when the value is changed.
+		6. Scrollbar 
+			A Scrollbar has a decimal number Value between 0 and 1. 
+			OnValueChanged UnityEvent to define what it will do when the value is changed.
+		7. Dropdown 
+			OnValueChanged UnityEvent to define what it will do when the currently chosen option is changed.
+		8. Input Field 
+		9. Scroll Rect (Scroll View) 
+	5. Animation Integration
+	6. Auto Layout
+		1. Understanding Layout Elements 
+		2. Understanding Layout Controllers 
+			1. Content Size Fitter 
+			2. Aspect Ratio Fitter 
+			3. Layout Groups 
+			4. Driven Rect Transform properties 
+		3. Technical Details 
+			1. Layout Interfaces 
+			2. Layout Calculations 
+			3. Triggering Layout Rebuild 
+	7. Rich Text
+		1. Markup format 
+			1. Nested elements 
+			2. Tag parameters 
+		2. Supported tags 
+			1. materials 
+			2. quad
+		3. Editor GUI
+
+________________________________
+________________________________
+
+
+
+________________________________	
+
+
+________________________________
+________________________________
+
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
+
+RTRR
+
+
+
+_________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________
